@@ -10,6 +10,8 @@ public class BrowserTest {
 		driver = new ChromeDriver();
 		driver.get("https://www.mycontactform.com");
 		driver.manage().window().maximize();
+		String title = driver.getTitle();
+		System.out.println(title);
 		Thread.sleep(3000);
 		driver.quit();
 	}
