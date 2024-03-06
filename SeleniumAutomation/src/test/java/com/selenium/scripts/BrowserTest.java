@@ -12,6 +12,7 @@ public class BrowserTest {
 		driver.manage().window().maximize();
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getPageSource());
 		Thread.sleep(3000);
 		driver.quit();
 	}
