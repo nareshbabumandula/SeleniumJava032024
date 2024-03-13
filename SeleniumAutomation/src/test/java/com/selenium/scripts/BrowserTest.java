@@ -19,7 +19,7 @@ public class BrowserTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
-<<<<<<< HEAD
+
 		driver.findElement(By.id("user")).sendKeys("Saikrishna");
 		driver.findElement(By.id("pass")).sendKeys("Secure*123");
 	
@@ -39,9 +39,8 @@ public class BrowserTest {
 			System.out.println(textfield.getAttribute("type"));
 		}
 			
-=======
 		System.out.println(driver.getPageSource());
->>>>>>> branch 'feature' of https://github.com/nareshbabumandula/SeleniumJava032024.git
+
 		Thread.sleep(3000);
 		driver.quit();
 	}
