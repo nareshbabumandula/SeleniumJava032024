@@ -63,7 +63,6 @@ public class WebTableTest{
 
 	@BeforeClass
 	public void launchBrowser() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		options.addArguments("--remote-allow-origins=*");

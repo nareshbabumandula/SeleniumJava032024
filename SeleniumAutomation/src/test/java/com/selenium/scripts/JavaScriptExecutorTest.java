@@ -62,7 +62,7 @@ public class JavaScriptExecutorTest{
 			jsExecutor.executeScript("arguments[0].style.border='2px solid red'", username); 
 			jsExecutor.executeScript("arguments[0].style.background='yellow'", username);  
 			Thread.sleep(2000);
-			jsExecutor.executeScript("arguments[0].value='priyanka';", username);
+			jsExecutor.executeScript("arguments[0].value='sai krishna';", username);
 			Thread.sleep(2000);
 
 			// Finding an element using Javascript and highlighting it.
@@ -74,7 +74,7 @@ public class JavaScriptExecutorTest{
 			actUsername = username.getAttribute("value");
 
 			System.out.println("Value entered in the username field is : " + actUsername);
-			Assert.assertEquals(actUsername, "priyanka", "Actual username is not same as expected");
+			Assert.assertEquals(actUsername, "sai krishna", "Actual username is not same as expected");
 
 			// Javascript click
 			js.executeScript("document.getElementsByName('btnSubmit')[0].click();");
@@ -97,7 +97,7 @@ public class JavaScriptExecutorTest{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
-			if(actUsername.equals("priyanka")){
+			if(actUsername.equals("sai krishna")){
 				test.log(LogStatus.PASS, "Successfully entered in the username field is : " + actUsername);
 			}else{
 				test.log(LogStatus.FAIL, "Value entered in the username field is not correct");
@@ -107,7 +107,6 @@ public class JavaScriptExecutorTest{
 
 	@BeforeClass
 	public void launchBrowser() {
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		options.addArguments("--remote-allow-origins=*");

@@ -39,6 +39,9 @@ public class BrowserTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
+		driver.navigate().back();
+		driver.navigate().forward();
+		driver.navigate().refresh();
 
 		driver.findElement(By.id("user")).sendKeys("Saikrishna");
 		driver.findElement(By.id("pass")).sendKeys("Secure*123");
